@@ -80,11 +80,11 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (str1.lenght== str2.lenght){
-    return true;
+  if (str1.length !=  str2.length){
+    return false;
   }
   else{
-    return false;
+    return true;
   }
 }
   
@@ -117,7 +117,7 @@ function mayorQueCincuenta(num) {
 function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
-  return x/y;
+  return x%y;
 }
 
 function esPar(num) {
@@ -266,6 +266,12 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
+  if (typeof letra === 'string' && letra.length === 1) {
+    return letra.match(/[aeiou]/) ? 'Es vocal' : 'Dato incorrecto'
+    } else {
+    return 'Dato incorrecto';
+  }
+
   
 }
 
